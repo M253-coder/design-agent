@@ -1,0 +1,12 @@
+# حفظ الصورة في الذاكرة لتنزيلها
+import io
+buf = io.BytesIO()
+enhanced_image.save(buf, format="JPEG")
+byte_im = buf.getvalue()
+
+st.download_button(
+    label="📥 تحميل التصميم المحسن",
+    data=byte_im,
+    file_name="enhanced_design.jpg",
+    mime="image/jpeg"
+)
